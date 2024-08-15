@@ -1,0 +1,202 @@
+:root {
+    --baseColor: #606468;
+    --iconFill: var(--baseColor);
+  
+    --htmlFontSize: 100%;
+    --bodyBackgroundColor: #2c3338;
+    --bodyColor: var(--baseColor);
+    --bodyFontFamily: "Open Sans";
+    --bodyFontFamilyFallback: sans-serif;
+    --bodyFontSize: 0.875rem;
+    --bodyFontWeight: 400;
+    --bodyLineHeight: 1.5;
+  
+    --anchorColor: #eee;
+  
+    --formGap: 0.875rem;
+  
+    --loginBorderRadius: 0.25rem;
+    --loginColor: #eee;
+    --loginInputBackgroundColor: #3b4148;
+    --loginInputHoverBackgroundColor: #434a52;
+    --loginLabelBackgroundColor: #363b41;
+    --loginSubmitBackgroundColor: #ea4c88;
+    --loginSubmitColor: #eee;
+    --loginSubmitHoverBackgroundColor: #d44179;
+  }
+  
+  /* Helpers */
+  .align {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+  
+  .grid {
+    width: 90%;
+    margin-inline: auto;
+    max-width: 20rem;
+  }
+  
+  .hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  /* Icons */
+  .icons {
+    display: none;
+  }
+  
+  .icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: var(--iconFill);
+    vertical-align: middle;
+  }
+  
+  /* Anchor styles */
+  a {
+    color: var(--anchorColor);
+    outline: none;
+    text-decoration: none;
+  }
+  
+  a:focus,
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form styles */
+  .form {
+    display: grid;
+    gap: var(--formGap);
+  }
+  
+  .form__field {
+    display: flex;
+  }
+  
+  .form__input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background-color: var(--loginInputBackgroundColor);
+    color: inherit;
+    font-size: inherit;
+    border-radius: var(--loginBorderRadius);
+    transition: background-color 0.3s;
+  }
+  
+  .form__input:focus,
+  .form__input:hover {
+    background-color: var(--loginInputHoverBackgroundColor);
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--loginSubmitBackgroundColor);
+    color: var(--loginSubmitColor);
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: var(--loginBorderRadius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"]:focus,
+  input[type="submit"]:hover {
+    background-color: var(--loginSubmitHoverBackgroundColor);
+  }
+  
+  /* Login form styles */
+  .login {
+    color: var(--loginColor);
+  }
+  
+  .login label {
+    background-color: var(--loginLabelBackgroundColor);
+    padding: 1rem 1.25rem;
+    border-radius: var(--loginBorderRadius) 0 0 var(--loginBorderRadius);
+    display: flex;
+    align-items: center;
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"]
+  .login input[type="email"] {
+    border-radius: 0 var(--loginBorderRadius) var(--loginBorderRadius) 0;
+  }
+  
+  /* Text styles */
+  .text__center {
+    text-align: center;
+  }
+  
+  p {
+    margin: 1.5rem 0;
+  }
+  
+
+  .socialLogin {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .socialLogin__title {
+    margin-bottom: 0.75rem;
+    color: var(--loginColor);
+    font-weight: 600;
+  }
+  
+  .socialLogin__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .socialLogin__link {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--loginBorderRadius);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .socialLogin__link_google {
+    background-color: #db4437;
+  }
+  
+  .socialLogin__link_google:hover {
+    background-color: #c53727;
+  }
+  
+  .socialLogin__link_facebook {
+    background-color: #3b5998;
+  }
+  
+  .socialLogin__link_facebook:hover {
+    background-color: #2d4373;
+  }
+
+  /* Outer Container */
+.componentContainer {
+    border: 2px solid var(--loginColor); /* Border color matching the component's color scheme */
+    border-radius: var(--loginBorderRadius); /* Use the same border radius for a consistent look */
+    padding: 5rem; /* Padding inside the border */
+    margin: 1.5rem; /* Optional: margin outside the component */
+    background-color: var(--bodyBackgroundColor); /* Optional: background color inside the border */
+  }
+  
